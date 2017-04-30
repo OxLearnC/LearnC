@@ -73,6 +73,36 @@ You can even send it to other people, and they can run it without installing any
 
 ### Installing CodeLite on Linux
 
+On Linux, the installation process is equally simple: just download the package for your Linux version from the download page and use the package
+manager to install it. You can also install it from the repositories via `apt-get` or similar, but it may be out of date (Ubuntu 16.04 only has CodeLite 9.1),
+so it's better to download the installer. Alternatively, you can add the CodeLite repositories to your package manager by following the instructions [here](http://codelite.org/LiteEditor/Repositories),
+but I don't recommend this unless you know what you're doing.
 
+After it's done, you'll have to go through the same configuration steps as in Windows. However, you won't be able to
+install a C++ compiler in the same way, you'll need to use your distro's repositories. You'll want to install packages `gcc` and `g++`.
+Depending on what distribution and version you're using, you will have access to a different version of the compiler. Ideally, you should
+install `gcc-5.1` and `g++-5.1` (or later). If these are not available, aim for `gcc-4.9` and `g++-4.9`, or the closest you can get.
+
+Once you've installed a compiler, you can proceed to configure CodeLite just as in the Windows version.
 
 ### Installing CodeLite on Mac
+
+If you have a Mac, you don't need to install CodeLite, just download the Mac version of CodeLite and unzip it, then go through the same configuration
+steps as before.
+
+If CodeLite can't find a C++ compiler in your system, you'll also need to install XCode, which you can find in the App Store for free. You can also
+use XCode as a C++ editor instead of CodeLite!
+
+## Alternative editors
+
+If you can't install CodeLite, don't like it or are feeling curious, other good free editors you can use are:
+
+* [Eclipse C++](http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/neon3) (Windows, Linux, Mac, comes without a compiler, kind of slow)
+
+* [Visual Studio Community](https://www.visualstudio.com/downloads/) (Windows only, comes with a compiler, lots of features, huge download)
+
+* [XCode](https://itunes.apple.com/gb/app/xcode/id497799835) (Mac only, comes with a compiler)
+
+* [NetBeans](https://netbeans.org/features/cpp/) (very similar to Eclipse) 
+
+* [Code::Blocks](http://www.codeblocks.org/downloads/26) (Windows, Linux, Mac, the Mac version is very outdated, comes with a compiler, very nice for Windows/Linux users)
