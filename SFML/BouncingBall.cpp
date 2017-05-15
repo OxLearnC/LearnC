@@ -27,27 +27,27 @@ int main()
 
     // Each iteration of this loop will be a frame
     while (! sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
-        // First we clear the screen
-        window.clear(sf::Color::Black);
+	// First we clear the screen
+	window.clear(sf::Color::Black);
         
-        // We accelerate the ball towards the ground
-        fall_speed += 0.0002;
-        // We update the position of the ball
-        ball.move(0, fall_speed);
+	// We accelerate the ball towards the ground
+	fall_speed += 0.0002;
+	// We update the position of the ball
+	ball.move(0, fall_speed);
         
-        // If the ball has hit the ground, we make it bounce!
-        if (ball.getPosition().y + ball.getRadius() >= 600) {
-            fall_speed = -fall_speed;
-        }
+	// If the ball has hit the ground, we make it bounce!
+	if (ball.getPosition().y + ball.getRadius() >= 600) {
+	    fall_speed = -fall_speed;
+	}
         
-        // We draw the ball!
-        window.draw(ball);
+	// We draw the ball!
+	window.draw(ball);
 
-        // Finally, when we are done drawing the frame, we show it with window.display()
-        window.display();
-        // This is necessary because when we draw, the actual changes are not shown to the player directly until we are done
-        // Otherwise, the player could see incomplete frames!
+	// Finally, when we are done drawing the frame, we show it with window.display()
+	window.display();
+	// This is necessary because when we draw, the actual changes are not shown to the player directly until we are done
+	// Otherwise, the player could see incomplete frames!
     }
     
-	return 0;
+    return 0;
 }
